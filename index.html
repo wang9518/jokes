@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="精选10条笑话，让你笑出声">
+<title>笑一下 · 10条精选笑话</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #faf6f0;
+    --card: #ffffff;
+    --text: #2c2c2c;
+    --text-light: #8a8a8a;
+    --accent: #e8733a;
+    --accent-light: #fdf0e8;
+    --border: #eee8e0;
+    --radius: 14px;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 16px 60px;
+  }
+
+  /* Header */
+  header {
+    text-align: center;
+    padding: 48px 0 32px;
+  }
+
+  header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--accent);
+  }
+
+  header .sub {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-top: 8px;
+  }
+
+  header .count {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    padding: 6px 18px;
+    background: var(--accent-light);
+    color: var(--accent);
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .count span {
+    font-size: 18px;
+  }
+
+  /* Joke Cards */
+  .joke-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .joke-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    padding: 20px 20px 20px 52px;
+    position: relative;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+
+  .joke-card:active {
+    transform: scale(0.99);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  .joke-number {
+    position: absolute;
+    left: 16px;
+    top: 20px;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-light);
+    color: var(--accent);
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .joke-content {
+    font-size: 15px;
+    line-height: 1.8;
+    word-break: break-word;
+  }
+
+  .joke-content p {
+    margin-bottom: 6px;
+  }
+
+  .joke-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 40px 0 0;
+    font-size: 12px;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
+  }
+
+  /* Back to top */
+  .back-top {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(232,115,58,0.3);
+    transition: opacity 0.2s, transform 0.2s;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .back-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+    display: flex;
+  }
+
+  .back-top:active {
+    transform: scale(0.92);
+  }
+
+  /* Scroll hint */
+  .scroll-hint {
+    text-align: center;
+    padding: 20px 0 8px;
+    color: var(--text-light);
+    font-size: 13px;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1a1a1a;
+      --card: #252525;
+      --text: #e8e8e8;
+      --text-light: #999;
+      --accent: #f0884a;
+      --accent-light: #2d2418;
+      --border: #333;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .joke-card { padding: 16px 14px 16px 44px; }
+    .joke-number { left: 12px; top: 16px; width: 22px; height: 22px; font-size: 11px; }
+    .joke-content { font-size: 14px; }
+    header h1 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>笑一下</h1>
+    <p class="sub">精选 10 条 · 不开心的时候翻翻</p>
+    <div class="count"><span>😄</span> 共 10 条笑话</div>
+  </header>
+
+  <div class="scroll-hint">↓ 往下翻 ↓</div>
+
+  <div class="joke-list">
+
+    <div class="joke-card">
+      <div class="joke-number">1</div>
+      <div class="joke-content">
+        0 和 8 在街上散步。0 说："哎呀，你的腰带真好看，在哪儿买的？"<br>
+        8 淡淡地说："别闹，那是我的身材。"
+      </div>
+    </div>
+
+    <div class="joke-card">
+      <div class="joke-number">2</div>
+      <div class="joke-content">
+        老师让小明用"像"造句。<br>
+        小明说："爸爸的脸像苹果，红红的。妈妈的脸像梨，黄黄的。我的脸像葡萄……"<br>
+        老师好奇地问："为什么像葡萄？"<br>
+        小明说："因为紫紫的。"<br>
+        老师："你们家是开水果摊的吗？"
+      </div>
+    </div>
+
+    <div class="joke-card">
+      <div class="joke-number">3</div>
+      <div class="joke-content">
+        一个包子走在路上，觉得肚子饿，就把自己吃了。
+      </div>
+    </div>
+
+    <div class="joke-card">
+      <div class="joke-number">4</div>
+      <div class="joke-content">
+        蚂蚁和大象吵架了。蚂蚁说："你给我等着，我叫人来！"<br>
+        蚂蚁叫来一群蚂蚁，大象还是没被吓到。<br>
+        蚂蚁又叫来一群蚂蚁，大象仍然纹丝不动。<br>
+        蚂蚁再叫来一群蚂蚁，大象终于受不了了：<br>
+        "你每次叫来的人不都一样吗？！"
+      </div>
+    </div>
+
+    <div class="joke-card">
+      <div class="joke-number">5</div>
+      <div class="joke-content">
+        简历上写着"精通 Office"，面试官问："你 Excel 水平怎么样？"<br>
+        应聘者说："能让一个格子有八个颜色。"<br>
+        面试官沉默了三秒说："你被录取了，明天去婚礼策划部报到。"
+      </div>
+    </div>
+
+    <div class="joke-card">
+      <div class="joke-number">6</div>
+      <div class="joke-content">
+        有一天，一只企鹅想给远方的朋友写信，但它不会写字。<br>
+        它去找老师帮忙。老师说："你要不要试试用冰块刻字？"<br>
+        企鹅说："刻好了寄过去就化了。"<br>
+        老师说："那……发电子邮件？"<br>
+        企鹅说："我爪子太粗了，打不了字。"<br>
+        老师叹了口气："你到底想怎么样？"<br>
+        企鹅说："我想你帮我把信寄出去。"<br>
+        老师说："那你写啊！"<br>
+        企鹅说："我不会写字。"
+      </div>
+    </div>
+
+    <div class="joke-card">
+      <div class="joke-number">7</div>
+      <div class="joke-content">
+        一只猫和一只老鼠站在悬崖边。<br>
+        猫说："你敢往下跳吗？"<br>
+        老鼠说："你敢跳我就敢跳。"<br>
+        猫纵身一跃跳了下去。<br>
+        老鼠站在悬崖边哈哈大笑：<br>
+        "你当我会学你吗？我又不傻。"
+      </div>
+    </div>
+
+    <div class="joke-card">
+      <div class="joke-number">8</div>
+      <div class="joke-content">
+        去面试，面试官问："你最擅长什么？"<br>
+        我说："修东西。"<br>
+        面试官拿出一个坏掉的闹钟："修好它。"<br>
+        我看了看说："这个需要换零件。"<br>
+        "那你会换吗？" "不会。"<br>
+        "那你凭什么说你会修东西？"<br>
+        "我会修东西，但不会换零件。"
+      </div>
+    </div>
+
+    <div class="joke-card">
+      <div class="joke-number">9</div>
+      <div class="joke-content">
+        一个鸡蛋去茶馆喝茶，出来的时候变成了茶叶蛋。<br>
+        朋友问它怎么回事。<br>
+        鸡蛋说："我也不知道，可能是泡得有点久。"
+      </div>
+    </div>
+
+    <div class="joke-card">
+      <div class="joke-number">10</div>
+      <div class="joke-content">
+        小明问爸爸："爸爸，我是从哪里来的？"<br>
+        爸爸说："捡来的。"<br>
+        小明："那哥哥呢？"<br>
+        爸爸："买奶粉送的。"<br>
+        小明："那妹妹呢？"<br>
+        爸爸："充话费送的。"<br>
+        小明沉默了一会儿说："所以这个家全靠赠品撑起来的？"
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    笑一笑，没什么大不了
+  </footer>
+</div>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  const btn = document.getElementById('backTop');
+  window.addEventListener('scroll', function() {
+    btn.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+</script>
+
+</body>
+</html>
